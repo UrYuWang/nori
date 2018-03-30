@@ -1,0 +1,14 @@
+/build
+/nori
+/warptest
+/ext_build
+/maps
+/.settings
+CMakeCache.txt
+CMakeFiles
+Makefile
+*.cmake
+.idea
+.cproject
+.project
+

@@ -1,0 +1,221 @@
+<!-- Table scene, Copyright (c) 2012 by Olesya Jakob -->
+
+<scene>
+	<sampler type="independent">
+		<integer name="sampleCount" value="256"/>
+	</sampler>
+
+	<integrator type="path_mis">
+	</integrator>
+
+	<camera type="perspective">
+		<transform name="toWorld">
+			<lookat target="31.6866, -67.2776, 36.18" 
+				origin="32.1259, -68.0505, 36.597" 
+				up="0, 0, 1"/>
+		</transform>
+
+		<float name="fov" value="30"/>
+
+		<integer name="width" value="1280"/>
+		<integer name="height" value="720"/>
+	</camera>
+
+	<emitter type="point">
+		<point name="position" value = "0, 1, 4"/>
+		<color name="power" value="200,200,100"/>
+	</emitter>
+	
+	<emitter type="point">
+		<point name="position" value = "10, 1, 4"/>
+		<color name="power" value="200,200,100"/>
+	</emitter>
+	
+	<emitter type="environment">
+		<string name="path2map" value = "../maps/pisa.exr"/>
+	</emitter>
+	
+	
+	<mesh type="obj">
+		<string name="filename" value="meshes/jack_evil.obj"/>
+
+		<bsdf type="disney">
+			<color name="baseColor" value="1 0.57 0"/>
+			<float name="subsurface" value="0.9" />
+			<float name="metallic" value="0." />
+			<float name="specular" value="0." />
+			<float name="specularTint" value="0." />
+			<float name="roughness" value="0.5" />
+			<float name="sheen" value="0." />
+			<float name="sheenTint" value="0." />
+			<float name="clearcoat" value="0." />
+			<float name="clearcoatGloss" value="0." />
+		</bsdf>
+		<transform name="toWorld">
+			<scale value="0.1,0.1,0.1"/>
+			<translate value="0,0,0"/>
+			<rotate axis="1,0,0" angle="90"/>
+		</transform>
+	</mesh>
+	
+	<mesh type="obj">
+		<string name="filename" value="meshes/jack_happy.obj"/>
+
+		<bsdf type="disney">
+			<color name="baseColor" value="1 0.44 0"/>
+			<float name="subsurface" value="0.8" />
+			<float name="metallic" value="0." />
+			<float name="specular" value="0." />
+			<float name="specularTint" value="0." />
+			<float name="roughness" value="0.8" />
+			<float name="sheen" value="0." />
+			<float name="sheenTint" value="0." />
+			<float name="clearcoat" value="0." />
+			<float name="clearcoatGloss" value="0." />
+		</bsdf>
+		<transform name="toWorld">
+			<scale value="0.1,0.1,0.1"/>
+			<translate value="10,0,0"/>
+			<rotate axis="1,0,0" angle="90"/>
+			<rotate axis="0,0,1" angle="10"/>
+		</transform>
+	</mesh>
+	
+	<mesh type="obj">
+		<string name="filename" value="meshes/gravestone_01.obj"/>
+
+		<bsdf type="disney">
+			<color name="baseColor" value="0.31 0.3 0.32"/>
+			<float name="subsurface" value="0.9" />
+			<float name="metallic" value="0." />
+			<float name="specular" value="0" />
+			<float name="specularTint" value="0." />
+			<float name="roughness" value="1" />
+			<float name="sheen" value="0." />
+			<float name="sheenTint" value="0." />
+			<float name="clearcoat" value="0" />
+			<float name="clearcoatGloss" value="0" />
+		</bsdf>
+		<transform name="toWorld">
+			<scale value="0.15,0.15,0.15"/>
+			<translate value="3,0,-10"/>
+			<rotate axis="1,0,0" angle="90"/>
+		</transform>
+	</mesh>
+	
+	<mesh type="obj">
+		<string name="filename" value="meshes/gravestone_01.obj"/>
+
+		<bsdf type="disney">
+			<color name="baseColor" value="0.35 0.34 0.37"/>
+			<float name="subsurface" value="0" />
+			<float name="metallic" value="0." />
+			<float name="specular" value="0" />
+			<float name="specularTint" value="0." />
+			<float name="roughness" value="0.4" />
+			<float name="sheen" value="0." />
+			<float name="sheenTint" value="0." />
+			<float name="clearcoat" value="0" />
+			<float name="clearcoatGloss" value="0" />
+		</bsdf>
+		<transform name="toWorld">
+			<scale value="0.15,0.15,0.15"/>
+			<translate value="-46,0,-10"/>
+			<rotate axis="1,0,0" angle="90"/>
+		</transform>
+	</mesh>
+	
+	<mesh type="obj">
+		<string name="filename" value="meshes/gravestone_02.obj"/>
+
+		<bsdf type="disney">
+			<color name="baseColor" value="0.401 0.4 0.406"/>
+			<float name="subsurface" value="0" />
+			<float name="metallic" value="0" />
+			<float name="specular" value="0" />
+			<float name="specularTint" value="0." />
+			<float name="roughness" value="0.7" />
+			<float name="sheen" value="0." />
+			<float name="sheenTint" value="0." />
+			<float name="clearcoat" value="0" />
+			<float name="clearcoatGloss" value="0" />
+		</bsdf>
+		<transform name="toWorld">
+			<scale value="0.15,0.15,0.15"/>
+			<translate value="-20,0,-10"/>
+			<rotate axis="1,0,0" angle="90"/>
+		</transform>
+	</mesh>
+	
+	<mesh type="obj">
+		<string name="filename" value="meshes/butcher_knife.obj"/>
+
+		<bsdf type="disney">
+			<color name="baseColor" value="1 1 1"/>
+			<float name="subsurface" value="0" />
+			<float name="metallic" value="1" />
+			<float name="specular" value="1" />
+			<float name="specularTint" value="1" />
+			<float name="roughness" value="0.02" />
+			<float name="sheen" value="1" />
+			<float name="sheenTint" value="1" />
+			<float name="clearcoat" value="0" />
+			<float name="clearcoatGloss" value="0" />
+		</bsdf>
+		<transform name="toWorld">
+			<scale value="0.01,0.01,0.01"/>
+			<translate value="0,-10,0"/>
+			<rotate axis="0,1,0" angle="90"/>
+			<rotate axis="0,0,01" angle="20"/>
+		</transform>
+	</mesh>
+	
+	
+	<mesh type="obj">
+		<string name="filename" value="meshes/skull.obj"/>
+
+		<bsdf type="disney">
+			<color name="baseColor" value="0.9 0.9 0.9"/>
+			<float name="subsurface" value="0" />
+			<float name="metallic" value="0" />
+			<float name="specular" value="1" />
+			<float name="specularTint" value="0" />
+			<float name="roughness" value="0.05" />
+			<float name="sheen" value="0." />
+			<float name="sheenTint" value="0" />
+			<float name="clearcoat" value="1" />
+			<float name="clearcoatGloss" value="1" />
+		</bsdf>
+		<transform name="toWorld">
+			<scale value="0.02,0.02,0.02"/>
+			<translate value="0,-20,-15"/>
+			<rotate axis="0,1,0" angle="90"/>
+			<rotate axis="0,0,1" angle="-20"/>
+		</transform>
+	</mesh>
+
+
+	<!-- floor -->
+	<mesh type="obj">
+		<string name="filename" value="meshes/mesh_1.obj"/>
+
+		<bsdf type="disney">
+			<color name="baseColor" value="0.29 0.15 0.045"/>
+			<float name="subsurface" value="1" />
+			<float name="metallic" value="0" />
+			<float name="specular" value="0" />
+			<float name="specularTint" value="0." />
+			<float name="roughness" value="1" />
+			<float name="sheen" value="0." />
+			<float name="sheenTint" value="0" />
+			<float name="clearcoat" value="0" />
+			<float name="clearcoatGloss" value="0" />
+		</bsdf>
+
+		<transform name="toWorld">
+			<scale value="0.2,0.35,0.5"/>
+			<translate value="-35,25,0"/>
+		</transform>
+	</mesh>
+	
+</scene>

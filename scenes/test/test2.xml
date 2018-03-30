@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<scene>
+	<integrator type="path_mis"/>
+
+	<camera type="perspective">
+		<float name="fov" value="100"/>
+		<transform name="toWorld">
+			<scale value="-1,1,1"/>
+			<lookat target="10, 100, 7" origin="0, 0.919769, 5.41159" up="0, 0, 1"/>
+		</transform>
+
+		<integer name="height" value="600"/>
+		<integer name="width" value="800"/>
+	</camera>
+
+	<sampler type="independent">
+		<integer name="sampleCount" value="256"/>
+	</sampler>
+
+	<mesh type="sphere">
+		<point name="center" value="10 100 7" />
+		<float name="radius" value="30" />
+
+		<bsdf type="diffuse">
+		</bsdf>
+	</mesh>
+
+	<emitter type="environment">
+		<string name="path2map" value = "../maps/pisa.exr"/>
+	</emitter>
+</scene>
